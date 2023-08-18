@@ -1,8 +1,8 @@
 export GPG_TTY=$(tty)
 export PATH=$HOME/.dev-tools/flutter/bin:$PATH
 
-# go binary
-export PATH=$HOME/go/bin:$PATH
+export GOROOT=$HOME/go
+export PATH=$PATH:$GOROOT/bin
 
 # add local bin
 export PATH=$HOME/.local/bin:$PATH
