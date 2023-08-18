@@ -1,6 +1,5 @@
-shell:
-  program: /bin/zsh
-
+# shell:
+   # program: /bin/zsh
 
 # Font config:
 font:
