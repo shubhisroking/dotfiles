@@ -11,7 +11,7 @@ plug "Aloxaf/fzf-tab"
 autoload -Uz compinit
 compinit
 
-source $HOME/.zsh-alias
+source $HOME/.alias.zsh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
