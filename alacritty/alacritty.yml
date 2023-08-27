@@ -1,11 +1,8 @@
-# shell:
-   # program: /bin/zsh
-
 # Font config:
 font:
     # Normal (roman):
     normal:
-        family: JetBrainsMono nerd font
+        family: BlexMono Nerd Font
         style: Regular
     size: 14
 
