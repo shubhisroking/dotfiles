@@ -7,3 +7,5 @@ lvim.plugins = {
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "github/copilot.vim" }
 }
+
+lvim.colorscheme "catppuccin"
