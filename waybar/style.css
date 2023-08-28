@@ -1,67 +1,121 @@
-@import "frappe.css";
+@import "mocha.css";
+
 * {
-  font-family: Ubuntu Nerd Font;
-  font-weight: normal;
-  font-size: 14px;
-  min-height: 0;
-  color: @text;
+    border: none;
+    border-radius: 0;
+    font-family: mononoki Nerd Font;
+    font-size: 16px;
+    min-height: 0;
 }
-#window,
-#clock,
-#tray,
-#workspaces,
-#pulseaudio,
-#battery,
-#network,
-#custom-arch {
-  background-color: rgba(69, 69, 69, 0.39);
-  margin-top: 2px;
-  margin-bottom: 2px;
-  padding: 3px;
-}
-#tray {
-  border-radius: 10px 10px 10px 10px;  
-  margin-right: 3px;
-}
-#custom-arch,
-#network {
-border-radius: 10px 0px 0px 10px;
-}
-#clock,
-#workspaces {
-    border-radius: 0px 10px 10px 0px;}
-#custom-arch {
-margin-left: 3px; }
-#clock {
-  font-weight: bold;
-  margin-right: 3px;
-}
-#window {
-font-weight: bold;
-border-radius: 10px 10px 10px 10px;
-padding-left: 3px;
-padding-right: 3px;
-}
-#workspaces button {
-  color: gray;
-  padding: 1px;
-  }
-#workspaces button.active {
+
+window#waybar {
+    background: transparent;
     color: white;
 }
 
-#workspaces button.focused {
-    color: white;
-  }
-#window {
-  font-weight: bold;
+#workspaces {
+    background-color: #24283b;
+    margin: 5px 5px 0px 5px;
+    border-radius: 5px;
 }
-button {
-  min-width: 16px;
+
+#workspaces button {
+    padding: 0px 10px;
+    color: #c0caf5;
 }
-window#waybar {
-  /* you can also GTK3 CSS functions! */
-  background-color: shade(@base, 0.9);
-  border: 2px solid alpha(@crust, 0.3);
-  border-radius: 10px 10px 10px 10px;
+
+#workspaces button.active {
+    color: #24283b;
+    background-color: #7aa2f7;
+    border-radius: 5px;
+}
+
+#workspaces button:hover {
+    background-color: #7dcfff;
+    color: #24283b;
+    border-radius: 5px;
+}
+
+#window, #tray {
+    background-color: #24283b;
+    margin: 5px 5px 0px 5px;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+
+#cpu, #memory, #disk, #temperature, #network, #pulseaudio, #backlight, #battery, #bluetooth, #custom-date, #clock {
+    background-color: #24283b;
+    padding: 0px 10px;
+}
+
+#cpu, #network {
+    margin: 5px 0px 0px 5px;
+}
+
+#temperature, #clock {
+    margin: 5px 5px 0px 0px;
+}
+
+#memory, #disk, #pulseaudio, #backlight, #battery, #bluetooth, #custom-date {
+    margin: 5px 0px 0px 0px;
+}
+
+#cpu, #memory, #disk, #temperature {
+    color: #9ece6a;
+}
+
+#cpu.warning, #memory.warning, #disk.warning {
+    color: #e0af68;
+}
+
+#cpu.critical, #memory.critical, #disk.critical, #temperature.critical {
+    background-color: #f7768e;
+    color: #24283b;
+}
+
+#cpu {
+    margin: 5px 0px 0px 5px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#temperature {
+    margin: 5px 5px 0px 0px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+#network {
+    color: #f7768e;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#pulseaudio {
+    color: #e0af68;
+}
+
+#backlight {
+    color: #c8c768;
+}
+
+#battery {
+    color: #9ece6a;
+}
+
+#battery.charging {
+    color: #9ece6a;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #f7768e;
+    color: #24283b;
+    /* border-radius: 5px 5px 5px 5px; */
+}
+
+#bluetooth {
+    color: #5badee;
+}
+
+#clock {
+    color: #b48ead;
+    border-radius: 0px 5px 5px 0px;
+    margin-right: 5px;
 }
