@@ -13,6 +13,9 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "Aloxaf/fzf-tab"
 plug "romkatv/powerlevel10k"
 plug "hlissner/zsh-autopair"
+plug "zsh-users/zsh-completions"
+plug "zsh-users/zsh-history-substring-search"
+
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
