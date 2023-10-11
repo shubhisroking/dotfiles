@@ -20,6 +20,8 @@ plug "zsh-users/zsh-history-substring-search"
 autoload -Uz compinit
 compinit
 
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 source $HOME/.alias.zsh
 
