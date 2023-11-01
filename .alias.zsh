@@ -1,5 +1,5 @@
 alias ll='ls -lh'
-alias l='ls -alh'
+alias l='ls -Alh'
 alias vi='nvim'
 alias vim='nvim'
 eval $(thefuck --alias)
