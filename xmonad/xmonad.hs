@@ -256,6 +256,7 @@ myStartupHook = do
         spawnOnce "nitrogen --restore"
         spawnOnce "picom &"
         spawnOnce "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
+        spawnOnce "redshift -P -O 4500 &"
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 
