@@ -12,7 +12,6 @@ import Data.Monoid
 import System.Exit
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.SpawnOnce
-import XMonad.Util.Run
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
