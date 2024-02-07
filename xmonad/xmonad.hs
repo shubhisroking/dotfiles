@@ -11,6 +11,7 @@ import XMonad
 import Data.Monoid
 import System.Exit
 import XMonad.Hooks.EwmhDesktops
+import XMonad.Util.SpawnOnce
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -246,8 +247,9 @@ myLogHook = return ()
 -- per-workspace layout choices.
 --
 -- By default, do nothing.
-myStartupHook = return ()
-
+myStartupHook = do
+        spawnOnce "nitrogen --restore"
+        spawnOnce "picom &"
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 
