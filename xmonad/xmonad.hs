@@ -71,6 +71,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch dmenu
 
     , ((modm,               xK_p     ), spawn "rofi -show drun -show icons")
+    , ((modm,               xK_v     ), spawn "rofi -show '\xf0ea Clipboard' -modi '\xf0ea Clipboard:greenclip print' -run-command '{cmd}'")
     -- flameshot
     , ((0,              xK_Print     ), spawn "flameshot gui")
     -- launch gmrun
