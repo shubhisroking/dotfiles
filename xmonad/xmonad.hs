@@ -12,6 +12,7 @@ import Data.Monoid
 import System.Exit
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.SpawnOnce
+import XMonad.Util.Run
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -256,7 +257,9 @@ myStartupHook = do
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = xmonad $ewmhFullscreen $ defaults
+main = do
+       xproc <- spawnPipe "xmobar"
+       xmonad $ ewmhFullscreen defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
