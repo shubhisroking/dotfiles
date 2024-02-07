@@ -19,6 +19,7 @@ import XMonad.Util.Loggers
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
+import           Graphics.X11.ExtraTypes.XF86
 
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
@@ -74,6 +75,14 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_v     ), spawn "rofi -show '\xf0ea Clipboard' -modi '\xf0ea Clipboard:greenclip print' -run-command '{cmd}'")
     -- flameshot
     , ((0,              xK_Print     ), spawn "flameshot gui")
+    -- playerctl
+    , ((modm, xK_semicolon), spawn "playerctl play-pause")
+    , ((0, xF86XK_AudioPause), spawn "playerctl play-pause")
+    , ((0, xF86XK_AudioPlay), spawn "playerctl play-pause")
+    , ((modm, xK_l), spawn "playerctl next")
+    , ((0, xF86XK_AudioNext), spawn "playerctl next")
+    , ((modm, xK_j), spawn "playerctl previous")
+    , ((0, xF86XK_AudioPrev), spawn "playerctl previous")
     -- launch gmrun
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
 
