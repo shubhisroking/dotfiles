@@ -250,6 +250,7 @@ myLogHook = return ()
 myStartupHook = do
         spawnOnce "nitrogen --restore"
         spawnOnce "picom &"
+        spawnOnce "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 
