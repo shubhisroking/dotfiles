@@ -63,8 +63,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch dmenu
-    , ((modm,               xK_p     ), spawn "rofi -show drun -show icons")
 
+    , ((modm,               xK_p     ), spawn "rofi -show drun -show icons")
+    , ((0,               xK_Print     ), spawn "flameshot gui")
     -- launch gmrun
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
 
