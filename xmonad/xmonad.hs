@@ -19,6 +19,7 @@ import XMonad.Util.Loggers
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
+import qualified XMonad.Util.Hacks as Hacks
 import           Graphics.X11.ExtraTypes.XF86
 
 -- The preferred terminal program, which is used in a binding below and by
@@ -247,7 +248,7 @@ myManageHook = composeAll
 -- return (All True) if the default handler is to be run afterwards. To
 -- combine event hooks use mappend or mconcat from Data.Monoid.
 --
-myEventHook = mempty
+myEventHook = handleEventHook def <> Hacks.windowedFullscreenFixEventHook
 
 ------------------------------------------------------------------------
 -- Status bars and logging
