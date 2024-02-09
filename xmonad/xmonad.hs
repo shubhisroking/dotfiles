@@ -306,7 +306,8 @@ main :: IO ()
 main = xmonad 
      . ewmhFullscreen 
      . ewmh
-     . withEasySB (statusBarProp "polybar main -r" (pure def)) defToggleStrutsKey 
+     . withEasySB (statusBarProp "polybar main -r" (pure def)) defToggleStrutsKey
+     . Hacks.javaHack
      $ defaults
 
 -- A structure containing your configuration settings, overriding
