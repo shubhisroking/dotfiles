@@ -5,6 +5,7 @@ Name=Xmonad
 Comment=Lightweight X11 tiled window manager written in Haskell
 Exec=xmonad
 Icon=xmonad
+DesktopNames=xmonad
 Terminal=false
 StartupNotify=false
 Categories=Application;
