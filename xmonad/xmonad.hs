@@ -18,6 +18,7 @@ import XMonad.Hooks.StatusBar.PP
 import XMonad.Util.Loggers
 import XMonad.Layout.NoBorders
 import XMonad.Hooks.ManageDocks
+import XMonad.Util.Cursor
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -270,6 +271,7 @@ myLogHook = return ()
 -- By default, do nothing.
 myStartupHook = do
          spawnOnce "bash ~/.xmonad/autostart.sh"
+	 setDefaultCursor xC_arrow
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 
