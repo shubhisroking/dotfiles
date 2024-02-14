@@ -79,7 +79,7 @@ color = "#F5E0DC"
 size = 11
 
 [font.normal]
-family = "BlexMono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [shell]
