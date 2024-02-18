@@ -85,3 +85,6 @@ style = "Regular"
 [shell]
 args = ["-l", "-c", "tmux attach || tmux"]
 program = "/bin/zsh"
+
+[env]
+TERM = "xterm-256color"
