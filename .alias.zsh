@@ -8,5 +8,5 @@ eval $(thefuck --alias fuq)
 eval $(thefuck --alias FUCK)
 alias nvim='lvim'
 
-# temp
-alias aicommits="aicommits --type conventional" 
+# make sure to install zoxide with 'sudo pacman -S zoxide'
+alias cd='z'
