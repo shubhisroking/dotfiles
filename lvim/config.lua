@@ -6,7 +6,7 @@
 lvim.plugins = {
   { "windwp/nvim-ts-autotag" },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  { "norcalli/nvim-colorizer.lua" },
+  { "NvChad/nvim-colorizer.lua" },
   { "github/copilot.vim" }
 }
 
