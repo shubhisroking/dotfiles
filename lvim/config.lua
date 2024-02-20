@@ -5,8 +5,20 @@
 --
 lvim.plugins = {
   { "windwp/nvim-ts-autotag" },
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "github/copilot.vim" }
 }
 
+require("catppuccin").setup {
+    color_overrides = {
+        mocha = {
+      		base = "#000000",
+					mantle = "#000000",
+					crust = "#000000",
+    },
+    }
+}
+
+lvim.colorscheme = "catppuccin"
 vim.opt.relativenumber = true -- relative line numbers
 lvim.builtin.treesitter.autotag.enable = true
