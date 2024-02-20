@@ -6,6 +6,7 @@
 lvim.plugins = {
   { "windwp/nvim-ts-autotag" },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "norcalli/nvim-colorizer.lua" },
   { "github/copilot.vim" }
 }
 
@@ -18,6 +19,8 @@ require("catppuccin").setup {
     },
     }
 }
+
+require'colorizer'.setup()
 
 lvim.colorscheme = "catppuccin"
 vim.opt.relativenumber = true -- relative line numbers
