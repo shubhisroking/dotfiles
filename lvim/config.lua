@@ -8,4 +8,5 @@ lvim.plugins = {
   { "github/copilot.vim" }
 }
 
+vim.opt.relativenumber = true -- relative line numbers
 lvim.builtin.treesitter.autotag.enable = true
