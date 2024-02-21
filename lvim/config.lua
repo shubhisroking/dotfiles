@@ -5,22 +5,30 @@
 --
 lvim.plugins = {
   { "windwp/nvim-ts-autotag" },
-  { "catppuccin/nvim",          name = "catppuccin", priority = 1000 },
-  { "NvChad/nvim-colorizer.lua" },
+  {
+    'catppuccin/nvim',
+    name = "catppuccin",
+    priority = 1000,
+    require("catppuccin").setup {
+      color_overrides = {
+        mocha = {
+          base = "#000000",
+          mantle = "#000000",
+          crust = "#000000",
+        },
+      }
+    }
+  },
+  {
+    'NvChad/nvim-colorizer.lua',
+    opts = {
+      config = function()
+        require("colorizer").setup()
+      end,
+    },
+  },
   { "github/copilot.vim" }
 }
-
-require("catppuccin").setup {
-  color_overrides = {
-    mocha = {
-      base = "#000000",
-      mantle = "#000000",
-      crust = "#000000",
-    },
-  }
-}
-
-require 'colorizer'.setup()
 
 vim.g.copilot_assume_mapped = true
 lvim.format_on_save.enabled = true
