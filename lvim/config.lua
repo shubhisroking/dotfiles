@@ -5,23 +5,24 @@
 --
 lvim.plugins = {
   { "windwp/nvim-ts-autotag" },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "catppuccin/nvim",          name = "catppuccin", priority = 1000 },
   { "NvChad/nvim-colorizer.lua" },
   { "github/copilot.vim" }
 }
 
 require("catppuccin").setup {
-    color_overrides = {
-        mocha = {
-      		base = "#000000",
-					mantle = "#000000",
-					crust = "#000000",
+  color_overrides = {
+    mocha = {
+      base = "#000000",
+      mantle = "#000000",
+      crust = "#000000",
     },
-    }
+  }
 }
 
-require'colorizer'.setup()
+require 'colorizer'.setup()
 
+lvim.format_on_save.enabled = true
 lvim.colorscheme = "catppuccin"
 vim.opt.relativenumber = true -- relative line numbers
 lvim.builtin.treesitter.autotag.enable = true
