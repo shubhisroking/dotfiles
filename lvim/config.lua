@@ -22,6 +22,7 @@ require("catppuccin").setup {
 
 require 'colorizer'.setup()
 
+vim.g.copilot_assume_mapped = true
 lvim.format_on_save.enabled = true
 lvim.colorscheme = "catppuccin"
 vim.opt.relativenumber = true -- relative line numbers
