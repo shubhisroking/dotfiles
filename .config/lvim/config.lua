@@ -26,7 +26,6 @@ lvim.plugins = {
 -- require("lvim.lsp.manager").setup("emmet_ls")
 
 vim.cmd [[ au BufReadPost * if line("'\"") >= 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif ]] -- Re-Open at last position
-vim.opt.confirm = true
 vim.g.copilot_assume_mapped = true
 lvim.format_on_save.enabled = true
 vim.opt.relativenumber = true -- relative line numbers
