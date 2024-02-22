@@ -22,6 +22,9 @@ lvim.plugins = {
   { "github/copilot.vim" }
 }
 
+-- uncomment this to enable emmet_ls
+-- require("lvim.lsp.manager").setup("emmet_ls")
+
 vim.cmd [[ au BufReadPost * if line("'\"") >= 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif ]] -- Re-Open at last position
 vim.opt.confirm = true
 vim.g.copilot_assume_mapped = true
