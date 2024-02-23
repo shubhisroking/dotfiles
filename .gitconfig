@@ -13,7 +13,7 @@
 [commit]
 	gpgsign = true
 [core]
-  editor = lvim
+  editor = nvim
 [core]
     pager = delta
 
