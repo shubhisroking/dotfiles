@@ -2,14 +2,12 @@
 xrdb -merge ~/.Xresources &
 
 # Start the compositor, adjust screen color temperature, and enable screen locking
-picom &
-redshift -P -O 5000 &
+redshift -P -O 4500 &
 xautolock -time 10 -locker slock &
 
 # Start the notification daemon, clipboard manager, status bar, and set wallpaper
 dunst &
 greenclip daemon &
-slstatus &
 nitrogen --restore &
 
 # Start the Polkit-GNOME authentication agent
