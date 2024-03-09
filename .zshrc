@@ -14,37 +14,29 @@ plug "Aloxaf/fzf-tab"
 plug "romkatv/powerlevel10k"
 plug "hlissner/zsh-autopair"
 plug "zsh-users/zsh-completions"
-plug "zsh-users/zsh-history-substring-search"
 
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
 
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-
+eval "$(atuin init zsh)"
+eval "$(zoxide init zsh)"
 source $HOME/.alias.zsh
 
-function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
+# bun completions
+[ -s "/home/shubh/.bun/_bun" ] && source "/home/shubh/.bun/_bun"
 
- # fnm
- export PATH="/home/shubh/.local/share/fnm:$PATH"
- eval "`fnm env`"
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/shubh/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/shubh/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/shubh/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/shubh/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# fnm
+export PATH="/home/shubh/.local/share/fnm:$PATH"
+eval "`fnm env`"
+
+# miniconda
+eval "$(/home/shubh/miniconda3/bin/conda shell.zsh hook)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
